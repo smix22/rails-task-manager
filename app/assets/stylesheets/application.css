@@ -13,3 +13,9 @@
  *= require_tree .
  *= require_self
  */
+
+ ul.no-bullets {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}

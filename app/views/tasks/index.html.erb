@@ -1,0 +1,8 @@
+<h2>My Tasks</h2>
+<ul class="no-bullets">
+  <% @tasks.each do |task| %>
+  <li><input type="checkbox" <% if task.completed == true %> checked <% end %> disabled> <%= link_to task.title, task_path(task) %> <%= link_to "Delete", task_path(task), data: {turbo_method: :delete} %></li>
+  <% end %>
+</ul>
+<hr>
+<div><%= link_to "+ New", "/new" %></div>
